@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RIEGO AUTOMATICO</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<style media="screen">
+	html, body{
+		height: 100%;
+	}
+	body{
+		display: flex; 
+		align-items: center;
+		background-image:url("https://images.freeimages.com/images/large-previews/76e/green-field-landscape-1337336.jpg");
+	</style>
+</head>
+<body>
+	<h1>RIEGO AUTOMATICO</h1>
+	<div class="container">
+		<div class="row justify-content-center align-self-center">
+			<a href="https://www.gifsanimados.org/cat-plantas-595.htm"><img src="https://www.gifsanimados.org/data/media/595/planta-imagen-animada-0115.gif" border="0" alt="planta-imagen-animada-0115" /></a>
+			<div class="card">
+				<div class="card header">
+					Valores
+				</div>
+				<h1 id="riego" class ="display-3 p-4"></h1> 
+				<h6 class ="display-3 p-4"></h6> 
+			</div>
+			<a href="https://www.gifsanimados.org/cat-plantas-595.htm"><img src="https://www.gifsanimados.org/data/media/595/planta-imagen-animada-0088.gif" border="0" alt="planta-imagen-animada-0088" /></a>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.js"></script>
+	<script>
+	var socket = io();
+	socket.on('index', function (data) {
+			console.log(data);
+			let index = document.getElementById('riego');
+			index.innerHTML = data;
+});
+socket.on('index', function (data) {
+			console.log(data);
+			let index = document.getElementById('riego');
+			index.innerHTML = data;
+});
+	</script>
+</body>
+</html>
